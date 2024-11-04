@@ -2,7 +2,7 @@ import { X, Menu } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="bg-slate-100 rounded-br-lg rounded-bl-lg">
+    <header className="rounded-br-lg rounded-bl-lg">
       <nav className="relative">
         {/* Hamburger menu checkbox (hidden) */}
         <input type="checkbox" className="peer hidden" id="nav-toggle" />
