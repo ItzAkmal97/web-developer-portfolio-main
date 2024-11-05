@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import {Link } from 'react-scroll';
 
 const Header = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -18,7 +19,7 @@ const Header = (): JSX.Element => {
   }, [isMenuOpen]);
 
   return (
-    <header className="rounded-br-lg rounded-bl-lg">
+    <header className="rounded-br-lg rounded-bl-lg sticky top-0 bottom-0 bg-[#ffe4c4]">
       <nav className="relative">
         <div className="flex justify-between items-center p-4">
           <h1 className="text-xl font-bold items-center">Muhammad Akmal</h1>
@@ -52,9 +53,34 @@ const Header = (): JSX.Element => {
 
           {/* Desktop navigation */}
           <ul className="hidden md:flex justify-center items-center gap-16 cursor-pointer">
-            <li className="hover:text-orange-800 font-semibold">Home</li>
-            <li className="hover:text-orange-800 font-semibold">About</li>
-            <li className="hover:text-orange-800 font-semibold">Contact</li>
+            <Link
+            to="hero"
+            smooth={true}
+            duration={300}
+            className="hover:text-orange-800 font-semibold"
+            >
+            <li>Home</li>
+            </Link>
+
+            <Link 
+            to="about"
+            smooth={true}
+            duration={300}
+            className="hover:text-orange-800 font-semibold"
+            >
+            <li>About</li>
+            </Link>
+        
+            <Link
+            to="contact"
+            smooth={true}
+            duration={300}
+            className="hover:text-orange-800 font-semibold"
+            >
+            <li>Contact</li>
+            </Link>
+            
+            
           </ul>
 
           {/* Desktop CTA button */}
@@ -72,9 +98,32 @@ const Header = (): JSX.Element => {
           }`}
         >
           <ul className="flex flex-col w-full items-center py-4 space-y-4 cursor-pointer">
+          <Link
+            to="hero"
+            smooth={true}
+            duration={300}
+            className="hover:text-orange-800 font-semibold"
+            >
             <li>Home</li>
+            </Link>
+
+            <Link 
+            to="about"
+            smooth={true}
+            duration={300}
+            className="hover:text-orange-800 font-semibold"
+            >
             <li>About</li>
+            </Link>
+        
+            <Link
+            to="contact"
+            smooth={true}
+            duration={300}
+            className="hover:text-orange-800 font-semibold"
+            >
             <li>Contact</li>
+            </Link>
             <li>
               <button className="bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold hover:transition duration-300 transition-ease">
                 Hire Me

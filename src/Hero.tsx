@@ -2,10 +2,12 @@ import CV from './assets/CV_MuhammadAkmal_Reactjs (1).pdf'
 import avatar from './assets/file.png'
 import Typewriter from 'typewriter-effect';
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import {Element} from 'react-scroll';
 
 const Hero = () => {
   return (
-    <section className="container mx-auto px-4">
+    <Element name="hero">
+      <section className="container mx-auto px-4">
       <div className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-20 md:gap-16">
         {/* Text Content */}
         <div className="flex flex-col items-center md:items-start gap-4 text-center md:text-left">
@@ -69,6 +71,8 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    </Element>
+    
   );
 };
 
