@@ -84,9 +84,12 @@ const Header = (): JSX.Element => {
           </ul>
 
           {/* Desktop CTA button */}
-          <button className="hidden md:block bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold hover:transition duration-300 transition-ease">
-            Hire Me
-          </button>
+          <a
+                href="mailto:muhammadakmal441@gmail.com?subject=Inquiry about hiring"
+                className="hidden md:inline-block bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold transition duration-300 ease-in-out">Hire Me
+            </a>
+
+          
         </div>
 
         {/* Mobile navigation menu */}
@@ -125,9 +128,11 @@ const Header = (): JSX.Element => {
             <li>Contact</li>
             </Link>
             <li>
-              <button className="bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold hover:transition duration-300 transition-ease">
-                Hire Me
-              </button>
+            <a
+                href="mailto:muhammadakmal441@gmail.com?subject=Inquiry about hiring"
+                className="hidden md:inline-block bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold transition duration-300 ease-in-out">Hire Me
+            </a>
+
             </li>
           </ul>
         </div>
