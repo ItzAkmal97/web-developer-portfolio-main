@@ -1,3 +1,4 @@
+import About from "./About"
 import Header from "./Header"
 import Hero from "./Hero"
 function App() {
@@ -6,6 +7,7 @@ function App() {
        <main className="max-w-7xl xl:max-w-6xl lg:max-w-5xl md:max-w-3xl h-screen mx-auto">
           <Header />
           <Hero />
+          <About />
        </main>
        </>
   )

@@ -1,10 +1,12 @@
 import CV from './assets/CV_MuhammadAkmal_Reactjs (1).pdf'
 import avatar from './assets/file.png'
 import Typewriter from 'typewriter-effect';
+import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
+
 const Hero = () => {
   return (
     <section className="container mx-auto px-4">
-      <div className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-8 md:gap-16">
+      <div className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-20 md:gap-16">
         {/* Text Content */}
         <div className="flex flex-col items-center md:items-start gap-4 text-center md:text-left">
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl">Hi, I'm Muhammad Akmal</h2>
@@ -23,8 +25,7 @@ const Hero = () => {
                 deleteSpeed: 50,
               }}
             />
-</h3>
-
+          </h3>
 
           <a 
             href={CV} 
@@ -33,11 +34,38 @@ const Hero = () => {
           >
             Download CV
           </a>
+
+          {/* Social Media Icons */}
+          <div className="flex gap-12 mt-6 mb-10">
+            <a 
+              href="https://github.com/ItzAkmal97" 
+              className="text-2xl hover:text-gray-600 transition-colors duration-300"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <FaGithub/>
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/muhammad-akmal-783745219/" 
+              className="text-2xl hover:text-gray-600 transition-colors duration-300"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+            <a 
+              href="https://www.facebook.com/profile.php?id=100006248289501" 
+              className="text-2xl hover:text-gray-600 transition-colors duration-300"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <FaFacebook />
+            </a>
+          </div>
         </div>
 
-      
         <div className="mb-8 md:mb-0">
-      <img src={avatar} alt='avatar' className='object-contain max-w-full max-h-full'/>
+          <img src={avatar} alt='avatar' className='object-contain'/>
         </div>
       </div>
     </section>

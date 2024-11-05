@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Header = (): JSX.Element => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -18,7 +18,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="bg-bisque-100 rounded-br-lg rounded-bl-lg">
+    <header className="rounded-br-lg rounded-bl-lg">
       <nav className="relative">
         <div className="flex justify-between items-center p-4">
           <h1 className="text-xl font-bold items-center">Muhammad Akmal</h1>
@@ -26,7 +26,7 @@ const Header = () => {
           {/* Hamburger and close button */}
           <button
             className="cursor-pointer md:hidden z-50"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen)}
           >
             {/* Hamburger icon */}
             <svg
@@ -36,10 +36,7 @@ const Header = () => {
               stroke="currentColor"
               strokeWidth="2"
             >
-              <path
-                strokeLinecap="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
             {/* Close (X) icon */}
             <svg
@@ -49,10 +46,7 @@ const Header = () => {
               stroke="currentColor"
               strokeWidth="2"
             >
-              <path
-                strokeLinecap="round"
-                d="M6 6l12 12M6 18L18 6"
-              />
+              <path strokeLinecap="round" d="M6 6l12 12M6 18L18 6" />
             </svg>
           </button>
 
@@ -64,20 +58,20 @@ const Header = () => {
           </ul>
 
           {/* Desktop CTA button */}
-          <button className="hidden md:block bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold hover:transition duration-300 transition-ease ">
+          <button className="hidden md:block bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold hover:transition duration-300 transition-ease">
             Hire Me
           </button>
         </div>
 
         {/* Mobile navigation menu */}
         <div
-          className={`absolute top-full left-0 transform transition-transform duration-300 md:hidden w-full bg-bisque-100 border-t border-black ${
+          className={`absolute top-full left-0 transform transition-transform duration-300 md:hidden w-full bg-orange-100 border-t border-black ${
             isMenuOpen
               ? 'translate-x-0'
               : '-translate-x-full'
           }`}
         >
-          <ul className="flex flex-col w-full items-center py-4 space-y-4">
+          <ul className="flex flex-col w-full items-center py-4 space-y-4 cursor-pointer">
             <li>Home</li>
             <li>About</li>
             <li>Contact</li>
