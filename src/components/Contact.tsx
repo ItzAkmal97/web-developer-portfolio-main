@@ -1,4 +1,4 @@
-import { Element } from 'react-scroll';
+import { Element } from "react-scroll";
 
 const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
@@ -8,17 +8,16 @@ const Contact: React.FC = () => {
   return (
     <Element name="contact" className="container mx-auto px-4 py-16">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Get In Touch</h2>
-        
-        <form 
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+          Get In Touch
+        </h2>
+
+        <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-6 bg-[#ffe6d5] p-8 rounded-lg shadow-sm"
+          className="flex flex-col gap-6 bg-[#ffe6d5] p-8 rounded-lg shadow-xl"
         >
           <div className="flex flex-col gap-2">
-            <label 
-              htmlFor="name" 
-              className="text-sm font-medium text-gray-700"
-            >
+            <label htmlFor="name" className="text-sm font-medium text-gray-700">
               Name
             </label>
             <input
@@ -32,8 +31,8 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label 
-              htmlFor="email" 
+            <label
+              htmlFor="email"
               className="text-sm font-medium text-gray-700"
             >
               Email
@@ -49,8 +48,8 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label 
-              htmlFor="message" 
+            <label
+              htmlFor="message"
               className="text-sm font-medium text-gray-700"
             >
               Message
