@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
         
         <form 
           onSubmit={handleSubmit}
-          className="flex flex-col gap-6 bg-[#fff5e6] p-8 rounded-lg shadow-sm"
+          className="flex flex-col gap-6 bg-[#ffe6d5] p-8 rounded-lg shadow-sm"
         >
           <div className="flex flex-col gap-2">
             <label 
