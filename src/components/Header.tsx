@@ -3,6 +3,7 @@ import {Link } from 'react-scroll';
 
 const Header = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isScroll, setIsScroll] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -18,9 +19,25 @@ const Header = (): JSX.Element => {
     };
   }, [isMenuOpen]);
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const baseClass = "rounded-br-lg rounded-bl-lg sticky top-0 left-0 z-50 bg-[#ffe4c4] transition-shadow duration-300 ease-in-out";
+  const shadowClass = "shadow-lg";
+
   return (
-    <header className="rounded-br-lg rounded-bl-lg sticky top-0 left-0 w-full z-50 bg-[#ffe4c4]">
-      <nav className="relative">
+    <header className={`${baseClass} ${isScroll ? shadowClass : ''}`}>
+      <nav className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center p-4">
           <h1 className="text-xl font-bold items-center">Muhammad Akmal</h1>
 
@@ -85,7 +102,7 @@ const Header = (): JSX.Element => {
 
           {/* Desktop CTA button */}
           <a
-                href="mailto:muhammadakmal441@gmail.com?subject=Inquiry about hiring"
+             href="mailto:muhammadakmal441@gmail.com?subject=Inquiry about hiring"
                 className="hidden md:inline-block bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold transition duration-300 ease-in-out">Hire Me
             </a>
 

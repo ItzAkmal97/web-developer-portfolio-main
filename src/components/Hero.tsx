@@ -7,7 +7,7 @@ import {Element} from 'react-scroll';
 const Hero = () => {
   return (
     <Element name="hero">
-      <section className="container mx-auto px-4">
+      <section className="container mx-auto px-4 max-w-7xl">
       <div className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-20 md:gap-16">
         {/* Text Content */}
         <div className="flex flex-col items-center md:items-start gap-4 text-center md:text-left">
