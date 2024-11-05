@@ -1,5 +1,5 @@
 import CV from './assets/CV_MuhammadAkmal_Reactjs (1).pdf'
-import avatar from './assets/Avatar-removebg-preview.png'
+import avatar from './assets/file.png'
 import Typewriter from 'typewriter-effect';
 const Hero = () => {
   return (
@@ -37,7 +37,7 @@ const Hero = () => {
 
       
         <div className="mb-8 md:mb-0">
-      <img src={avatar} alt='avatar' className='object-contain max-w-full max-h-50'/>
+      <img src={avatar} alt='avatar' className='object-contain max-w-full max-h-full'/>
         </div>
       </div>
     </section>
