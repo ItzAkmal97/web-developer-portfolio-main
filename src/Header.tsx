@@ -18,7 +18,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="bg-slate-100 rounded-br-lg rounded-bl-lg">
+    <header className="bg-bisque-100 rounded-br-lg rounded-bl-lg">
       <nav className="relative">
         <div className="flex justify-between items-center p-4">
           <h1 className="text-xl font-bold items-center">Muhammad Akmal</h1>
@@ -58,20 +58,20 @@ const Header = () => {
 
           {/* Desktop navigation */}
           <ul className="hidden md:flex justify-center items-center gap-16 cursor-pointer">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li className="hover:text-orange-800 font-semibold">Home</li>
+            <li className="hover:text-orange-800 font-semibold">About</li>
+            <li className="hover:text-orange-800 font-semibold">Contact</li>
           </ul>
 
           {/* Desktop CTA button */}
-          <button className="hidden md:block bg-slate-300 rounded-full px-4 py-2 font-semibold">
+          <button className="hidden md:block bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold hover:transition duration-300 transition-ease ">
             Hire Me
           </button>
         </div>
 
         {/* Mobile navigation menu */}
         <div
-          className={`absolute top-full left-0 transform transition-transform duration-300 md:hidden w-full bg-slate-100 border-t border-slate-200 ${
+          className={`absolute top-full left-0 transform transition-transform duration-300 md:hidden w-full bg-bisque-100 border-t border-black ${
             isMenuOpen
               ? 'translate-x-0'
               : '-translate-x-full'
@@ -82,7 +82,7 @@ const Header = () => {
             <li>About</li>
             <li>Contact</li>
             <li>
-              <button className="bg-slate-300 rounded-full px-4 py-2 font-semibold">
+              <button className="bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold hover:transition duration-300 transition-ease">
                 Hire Me
               </button>
             </li>
