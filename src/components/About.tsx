@@ -2,9 +2,9 @@ import {Element} from 'react-scroll';
 const About = () => {
     return (
         <Element name="about">
-      <section className="container mx-auto px-4 py-10 md:py-4 rounded-xl bg-[#ffe6d5] shadow-xl max-w-7xl">
+      <section className="container mx-auto px-2 py-10 md:py-4 rounded-xl bg-[#ffe6d5] shadow-xl max-w-7xl">
         {/* About Me Section */}
-        <div className="max-w-7xl mx-auto p-6">
+        <div className="max-w-7xl mx-auto p-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">About Me</h2>
           
           <div className="space-y-6 text-gray-700">
