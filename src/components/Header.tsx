@@ -19,7 +19,7 @@ const Header = (): JSX.Element => {
   }, [isMenuOpen]);
 
   return (
-    <header className="rounded-br-lg rounded-bl-lg sticky top-0 bottom-0 bg-[#ffe4c4]">
+    <header className="rounded-br-lg rounded-bl-lg sticky top-0 left-0 w-full z-50 bg-[#ffe4c4]">
       <nav className="relative">
         <div className="flex justify-between items-center p-4">
           <h1 className="text-xl font-bold items-center">Muhammad Akmal</h1>
@@ -89,15 +89,15 @@ const Header = (): JSX.Element => {
                 className="hidden md:inline-block bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold transition duration-300 ease-in-out">Hire Me
             </a>
 
-          
+           
         </div>
 
         {/* Mobile navigation menu */}
         <div
-          className={`absolute top-full left-0 transform transition-transform duration-300 md:hidden w-full bg-orange-100 border-t border-black ${
+          className={`absolute top-0 transform transition-transform duration-300 md:hidden w-full bg-orange-100 ${
             isMenuOpen
-              ? 'translate-x-0'
-              : '-translate-x-full'
+              ? 'translate-y-0'
+              : '-translate-y-full'
           }`}
         >
           <ul className="flex flex-col w-full items-center py-4 space-y-4 cursor-pointer">
@@ -130,8 +130,7 @@ const Header = (): JSX.Element => {
             <li>
             <a
                 href="mailto:muhammadakmal441@gmail.com?subject=Inquiry about hiring"
-                className="hidden md:inline-block bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold transition duration-300 ease-in-out">Hire Me
-            </a>
+                className="md:inline-block bg-bisque-900 rounded-full px-4 py-2 border border-black hover:bg-orange-200 font-semibold transition duration-300 ease-in-out">Hire Me</a>
 
             </li>
           </ul>

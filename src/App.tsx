@@ -1,11 +1,11 @@
-import About from "./About"
-import Header from "./Header"
-import Hero from "./Hero"
-import Contact from "./Contact"
+import About from "./components/About"
+import Header from "./components/Header"
+import Hero from "./components/Hero"
+import Contact from "./components/Contact"
 function App() {
   return (
        <>
-       <main className="max-w-9xl xl:max-w-6xl lg:max-w-5xl md:max-w-3xl h-screen mx-auto">
+       <main className="xl:max-w-8xl min-h-screen mx-auto">
           <Header />
           <Hero />
           <About />

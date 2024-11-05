@@ -1,5 +1,5 @@
-import CV from './assets/CV_MuhammadAkmal_Reactjs (1).pdf'
-import avatar from './assets/file.png'
+import CV from './../assets/CV_MuhammadAkmal_Reactjs (1).pdf';
+import avatar from './../assets/file.png'
 import Typewriter from 'typewriter-effect';
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import {Element} from 'react-scroll';
@@ -67,7 +67,7 @@ const Hero = () => {
         </div>
 
         <div className="mb-8 md:mb-0">
-          <img src={avatar} alt='avatar' className='object-contain'/>
+          <img src={avatar} alt='avatar' className='object-contain md:w-96 lg:w-full'/>
         </div>
       </div>
     </section>

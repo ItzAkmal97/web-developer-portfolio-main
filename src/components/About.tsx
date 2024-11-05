@@ -4,7 +4,7 @@ const About = () => {
         <Element name="about">
             <section className="container mx-auto px-4 py-16 md:py-24 bg-[#ffe6d5]">
         {/* About Me Section */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">About Me</h2>
           
           <div className="space-y-6 text-gray-700">
