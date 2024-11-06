@@ -19,13 +19,15 @@ const Header = (): JSX.Element => {
       setIsScroll(false);
     }
   }
+
+  window.addEventListener('scroll', handleScroll);
     
 
   const baseClass = "rounded-br-lg rounded-bl-lg sticky top-0 left-0 z-50 bg-[#ffe4c4] transition-shadow duration-300 ease-in-out";
   const shadowClass = "shadow-lg";
 
   return (
-    <header onScroll={handleScroll} className={`${baseClass} ${isScroll ? shadowClass : ''}`}>
+    <header className={`${baseClass} ${isScroll ? shadowClass : ''}`}>
       <nav className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center p-4">
           <h1 className="text-xl font-bold items-center">Muhammad Akmal</h1>
