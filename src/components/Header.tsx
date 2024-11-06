@@ -1,23 +1,16 @@
-import { useState, useEffect } from 'react';
-import {Link } from 'react-scroll';
+import { useState} from 'react';
+import { Link } from 'react-scroll';
 
 const Header = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isScroll, setIsScroll] = useState<boolean>(false);
 
-  useEffect(() => {
+ 
     const handleResize = () => {
-      // Close the menu when switching to desktop view
       if (window.innerWidth >= 768 && isMenuOpen) {
         setIsMenuOpen(false);
       }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [isMenuOpen]);
+    };    
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -26,17 +19,13 @@ const Header = (): JSX.Element => {
       setIsScroll(false);
     }
   }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    
 
   const baseClass = "rounded-br-lg rounded-bl-lg sticky top-0 left-0 z-50 bg-[#ffe4c4] transition-shadow duration-300 ease-in-out";
   const shadowClass = "shadow-lg";
 
   return (
-    <header className={`${baseClass} ${isScroll ? shadowClass : ''}`}>
+    <header onScroll={handleScroll} className={`${baseClass} ${isScroll ? shadowClass : ''}`}>
       <nav className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center p-4">
           <h1 className="text-xl font-bold items-center">Muhammad Akmal</h1>
@@ -69,7 +58,7 @@ const Header = (): JSX.Element => {
           </button>
 
           {/* Desktop navigation */}
-          <ul className="hidden md:flex justify-center items-center gap-16 cursor-pointer">
+          <ul onResize={handleResize} className="hidden md:flex justify-center items-center gap-16 cursor-pointer">
             <Link
             to="hero"
             smooth={true}
